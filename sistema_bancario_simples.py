@@ -14,11 +14,12 @@ extrato = ""
 numero_saques = 0
 LIMITE_SAQUES = 3
 
-operacao = list()
+operacao = list() # a solução encontrada para exibir o extrato foi criar uma lista contendo as ações executadas
 
 while True:
     opcao = input(menu)
     if opcao == "d":     
+        # Adicionei um try-except a fim de evitar possíveis erros caso o usuário digitasse um valor não numérico
         try:
             valor_deposito = float(input("Insira um valor para depósito: R$"))
             if valor_deposito > 0:
